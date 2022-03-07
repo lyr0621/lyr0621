@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到万双元神论坛!</title>
+    <style>
+        html, body {
+            margin: center;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>即将跳转...</h3><br>
+    <p>访问密码:Discuz123</p>
+    <button id="button">复制密码并跳转</button>
+</body>
+</html>
+<script>
+
+    function copyTextToClipboard(str) {
+        const el = document.createElement("textarea")
+        el.value = str
+        document.body.appendChild(el)
+        el.select()
+        document.execCommand("copy")
+        el.setAttribute("style","display:none")
+    }
+    const button = document.querySelector("#button")
+    button.addEventListener("click",() => {
+        copyTextToClipboard("Discuz123")
+        window.location.href = "http://ftp6506322.host120.sanfengyun.cn/"
+    })
+</script>
